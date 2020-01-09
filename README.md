@@ -1,93 +1,34 @@
-﻿# Plot.ly Homework - Belly Button Biodiversity
+﻿## Background
 
-![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
+In this assignment I built an interactive dashboard using Plotly.js and a flask application to explore a Belly Button Biodiversity DataSet.
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
+## Step by Step
 
-### Before You Begin
+### Plotly.js
+* Used Plotly.js to build interactive charts for the dashboard.
 
-1. Create a new repository for this project called `plotly-challenge`. **Do not add this homework to an existing repository**.
+    * Created a pie chart that uses data from the samples route (`/samples/<sample>`) to display the top 10 samples.
 
-2. Clone the new repository to your computer.
+        * Used `sample_values` as the values for the pie chart.
 
-3. Inside your local git repository, create a directory for the Plotly challenge. Use the folder name to correspond to the challenge: **Belly_Button_Diversity**.
+        * Used `otu_ids` as the labels for the pie chart.
 
-4. This is a full stack app so add your html, js, css, python and sqlite files.
+        * Used `otu_labels` as the hovertext for the chart.
 
-5. Push the above changes to GitHub or GitLab.
+    * Created a Bubble Chart that uses data from the samples route (`/samples/<sample>`) to display each sample.
 
-## Step 1 - Plotly.js
+        * Used `otu_ids` for the x values.
 
-Use Plotly.js to build interactive charts for your dashboard.
+        * Used `sample_values` for the y values.
 
-* Create a PIE chart that uses data from your samples route (`/samples/<sample>`) to display the top 10 samples.
+        * Used `sample_values` for the marker size.
 
-  * Use `sample_values` as the values for the PIE chart.
+        * Used `otu_ids` for the marker colors.
 
-  * Use `otu_ids` as the labels for the pie chart.
+        * Used `otu_labels` for the text values.
 
-  * Use `otu_labels` as the hovertext for the chart.
+    * Displayed the sample metadata from the route `/metadata/<sample>`
 
-  ![PIE Chart](Images/pie_chart.png)
+    * Displayed each key/value pair from the metadata JSON object somewhere on the page.
 
-* Create a Bubble Chart that uses data from your samples route (`/samples/<sample>`) to display each sample.
-
-  * Use `otu_ids` for the x values.
-
-  * Use `sample_values` for the y values.
-
-  * Use `sample_values` for the marker size.
-
-  * Use `otu_ids` for the marker colors.
-
-  * Use `otu_labels` for the text values.
-
-  ![Bubble Chart](Images/bubble_chart.png)
-
-* Display the sample metadata from the route `/metadata/<sample>`
-
-  * Display each key/value pair from the metadata JSON object somewhere on the page.
-
-* Update all of the plots any time that a new sample is selected.
-
-* You are welcome to create any layout that you would like for your dashboard. An example dashboard page might look something like the following.
-
-![Example Dashboard Page](Images/dashboard_part1.png)
-![Example Dashboard Page](Images/dashboard_part2.png)
-
-
-- - -
-
-## Advanced Challenge Assignment (Optional)
-
-The following task is completely optional and is very advanced.
-
-* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the Weekly Washing Frequency obtained from the `/metadata/<sample>`route.
-
-* You will need to modify the example gauge code to account for values ranging from 0 - 9.
-
-* Update the chart whenever a new sample is selected.
-
-![Weekly Washing Frequency Gauge](Images/gauge.png)
-
-- - -
-
-## Flask API
-
-Use Flask API starter code to serve the data needed for your plots.
-
-* Test your routes by visiting each one in the browser.
-
-- - -
-
-## Hints
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js Documentation](https://plot.ly/javascript/) when building the plots.
-
-- - -
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
+    * Updated all of the plots any time that a new sample is selected.
