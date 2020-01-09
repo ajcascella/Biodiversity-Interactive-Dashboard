@@ -4,7 +4,6 @@ In this assignment I built an interactive dashboard using Plotly.js and a flask 
 
 ## Step by Step
 
-### Plotly.js
 * Used Plotly.js to build interactive charts for the dashboard.
 
     * Created a pie chart that uses data from the samples route (`/samples/<sample>`) to display the top 10 samples.
